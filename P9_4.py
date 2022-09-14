@@ -28,7 +28,7 @@ class Address:
         if self._postalCode <= other._postalCode:
             print("this address comes before the other")
         else:
-            print("this adress does not comes before the other")
+            print("this address does not comes before the other")
 #Testing
 # create instances of class
 # without apartment number

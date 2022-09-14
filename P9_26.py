@@ -25,15 +25,18 @@ class Customer:
             self._budget = self._budget - 100
             print(f"You will get a discount for the next purchase, your accumulation for new round is {self._budget}")
         else:
-            print(f"Your accumulation is {self._budget}, You do not get a discount")
+            print(f"Your accumulation is {self._budget}, You do not get a discount for the next purchase")
 #Testing
 
 customer1 = Customer(120)
 print(customer1._budget) # expected 120
 customer1.makePurchase(60)
-print(customer1._budget)
+print(customer1._budget) # expected 180
 customer1.discountReached()
+print(" Expected: You will get a discount for the next purchase, your accumulation for new round is 80")
 customer1.makePurchase(12)
 customer1.discountReached()
+print( "Expected result: Your accumulation is 92, You do not get a discount for the next purchase ")
 customer1.makePurchase(70)
 customer1.discountReached() 
+print("Expected result: You will get a discount for the next purchase, your accumulation for new round is 62p")
